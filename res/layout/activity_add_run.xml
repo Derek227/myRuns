@@ -1,0 +1,99 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingBottom="@dimen/activity_vertical_margin"
+    android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    tools:context=".AddRun" >
+
+    <Button
+        android:id="@+id/btnAdd"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentRight="true"
+        android:layout_marginBottom="20dp"
+        android:layout_marginRight="20dp"
+        android:text="Record" />
+
+    <TextView
+        android:id="@+id/textView1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentTop="true"
+        android:text="[Welcome]" />
+
+    <EditText
+        android:id="@+id/txtRunTime"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/textView1"
+        android:layout_below="@+id/textView1"
+        android:layout_marginTop="20dp"
+        android:ems="10"
+        android:hint="Run Time" >
+
+        <requestFocus />
+    </EditText>
+
+    <Spinner
+        android:id="@+id/spinMonth"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/txtRunTime"
+        android:layout_below="@+id/txtRunTime"
+        android:entries="@array/months" />
+
+    <EditText
+        android:id="@+id/txtday"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignTop="@+id/spinMonth"
+        android:layout_centerHorizontal="true"
+        android:ems="10"
+        android:hint="Day"
+        android:inputType="number"
+        android:width="75dp" />
+
+    <EditText
+        android:id="@+id/txtYear"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBaseline="@+id/txtday"
+        android:layout_alignBottom="@+id/txtday"
+        android:layout_toRightOf="@+id/txtday"
+        android:ems="10"
+        android:hint="Year"
+        android:inputType="number" />
+
+    <EditText
+        android:id="@+id/txtDistance"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/spinMonth"
+        android:layout_below="@+id/spinMonth"
+        android:layout_toLeftOf="@+id/btnAdd"
+        android:ems="10"
+        android:hint="Distance"
+        android:inputType="numberDecimal" />
+
+    <Spinner
+        android:id="@+id/spinUnit"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/spinMonth"
+        android:layout_toRightOf="@+id/txtDistance"
+        android:entries="@array/units" />
+
+    <TextView
+        android:id="@+id/txtErr"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/txtDistance"
+        android:layout_below="@+id/spinUnit"
+        android:layout_marginTop="66dp" />
+
+</RelativeLayout>
